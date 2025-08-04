@@ -1,0 +1,102 @@
+.sidenav-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.sidenav {
+  width: 280px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #e0e0e0;
+}
+
+.sidenav-header {
+  padding: 24px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  background: #f8f9fa;
+}
+
+.sidenav-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1976d2;
+  text-align: center;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 64px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-button {
+  margin-right: 16px;
+}
+
+.toolbar-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.content {
+  padding: 24px;
+  min-height: calc(100vh - 64px);
+  background: #fafafa;
+}
+
+/* Navigation List Styling */
+mat-nav-list {
+  padding-top: 16px;
+}
+
+mat-nav-list a {
+  margin: 4px 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+mat-nav-list a:hover {
+  background-color: #f5f5f5;
+}
+
+mat-nav-list a.active {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+mat-nav-list a.active mat-icon {
+  color: #1976d2;
+}
+
+/* Icon styling */
+mat-icon {
+  color: #666;
+  margin-right: 12px;
+}
+
+/* List item text */
+[matListItemTitle] {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidenav {
+    width: 100vw;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+}
+
+/* Animation for drawer */
+.mat-drawer-transition .mat-drawer-content {
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-property: transform, margin-left, margin-right;
+}

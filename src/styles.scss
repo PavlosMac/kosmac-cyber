@@ -1,10 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import './custom-theme.scss';
 
+/* Global paragraph styling */
+p {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
 .header-image {
-    width: 15rem;
-    height: 10rem;
-    display: block;
+    width: 100%;
 }
 
 html, body { 

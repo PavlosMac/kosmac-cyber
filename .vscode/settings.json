@@ -1,0 +1,10 @@
+{
+  "tailwindCSS.validate": false,
+  "tailwindCSS.emmetCompletions": false,
+  "tailwindCSS.suggestions": false,
+  "css.validate": true,
+  "scss.validate": true,
+  "files.associations": {
+    "*.scss": "scss"
+  }
+}

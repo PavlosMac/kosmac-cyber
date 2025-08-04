@@ -49,6 +49,9 @@ This is an Angular 20 application using:
 - `src/server.ts`: Express server for SSR with Angular Node App Engine
 - `angular.json`: Angular CLI configuration with SSR and build optimizations
 
+### Key modules
+- `ngx-markdown` for markdown rendering in components
+
 ### Development Practices (from best-practices.md)
 - Use standalone components (never set `standalone: true` explicitly)
 - Use `input()` and `output()` functions instead of decorators
@@ -66,3 +69,4 @@ This is an Angular 20 application using:
 ### Build Configuration
 - Production builds are optimized with bundle budgets (500kB warning, 1MB error)
 - Development builds include source maps and no optimization
+

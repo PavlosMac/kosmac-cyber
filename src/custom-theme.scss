@@ -1,0 +1,53 @@
+// Custom Angular Material theme configuration
+// Learn more about theming at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the theme's color palettes - Magenta Violet Theme
+// Using built-in Angular Material palettes for simplicity
+$primary-palette: mat.m2-define-palette(mat.$m2-purple-palette);
+$accent-palette: mat.m2-define-palette(mat.$m2-pink-palette);
+$warn-palette: mat.m2-define-palette(mat.$m2-red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$custom-theme: mat.m2-define-light-theme((
+  color: (
+    primary: $primary-palette,
+    accent: $accent-palette,
+    warn: $warn-palette,
+  ),
+  typography: mat.m2-define-typography-config(),
+  density: 0,
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($custom-theme);
+
+// You can also create dark themes
+// $dark-theme: mat.m2-define-dark-theme((
+//   color: (
+//     primary: $primary-palette,
+//     accent: $accent-palette,
+//     warn: $warn-palette,
+//   ),
+// ));
+
+// Global styles
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.87);
+}
