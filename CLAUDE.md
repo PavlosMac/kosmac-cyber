@@ -51,6 +51,7 @@ This is an Angular 20 application using:
 
 ### Key modules
 - `ngx-markdown` for markdown rendering in components
+- documentation: https://www.npmjs.com/package/ngx-markdown
 
 ### Development Practices (from best-practices.md)
 - Use standalone components (never set `standalone: true` explicitly)

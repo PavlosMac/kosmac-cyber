@@ -13,6 +13,7 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+  
       "architect": {
         "build": {
           "builder": "@angular/build:application",
@@ -26,7 +27,18 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/prismjs/themes/prism-okaidia.css"
+            ],
+            "scripts": [
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-typescript.min.js",
+              "node_modules/prismjs/components/prism-javascript.min.js",
+              "node_modules/prismjs/components/prism-css.min.js",
+              "node_modules/prismjs/components/prism-scss.min.js",
+              "node_modules/prismjs/components/prism-json.min.js",
+              "node_modules/prismjs/components/prism-bash.min.js",
+              "node_modules/emoji-toolkit/lib/js/joypixels.min.js"
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
@@ -90,5 +102,7 @@
         }
       }
     }
+    
   }
+  
 }
