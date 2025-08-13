@@ -17,9 +17,13 @@
     <mat-nav-list>
       <a mat-list-item routerLink="/blog/angular" routerLinkActive="active" (click)="toggleDrawer()">
         <mat-icon matListItemIcon>article</mat-icon>
-        <span matListItemTitle>Angular Blog</span>
+        <span matListItemTitle>Return to Angular Blog</span>
       </a>
       
+      <a mat-list-item routerLink="/blog/signals" routerLinkActive="active" (click)="toggleDrawer()">
+        <mat-icon matListItemIcon>article</mat-icon>
+        <span matListItemTitle>Angular Signals</span>
+      </a>
       <!-- Add more navigation items here as needed -->
       <a mat-list-item routerLink="/" routerLinkActive="active" (click)="toggleDrawer()">
         <mat-icon matListItemIcon>home</mat-icon>
