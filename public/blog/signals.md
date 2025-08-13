@@ -110,7 +110,6 @@ Nice with a simplified syntax. :+1:
 
 ### Also nicer template syntax:
 
-**Templates:**
 ```typescript
 // Signals - no pipe needed
 {{ results() }}
