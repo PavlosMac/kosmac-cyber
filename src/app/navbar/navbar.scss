@@ -18,10 +18,12 @@
 
 .sidenav-header h3 {
   margin: 0;
+  font-family: 'Orbitron', sans-serif;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   color: #1976d2;
   text-align: center;
+  letter-spacing: 1px;
 }
 
 .toolbar {
@@ -37,8 +39,10 @@
 }
 
 .toolbar-title {
+  font-family: 'Orbitron', sans-serif;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .content {

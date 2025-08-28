@@ -1,0 +1,24 @@
+sequenceDiagram
+Note over Client,Server: Both sides agree on **hybrid cipher suite** (ECDHE + PQC KEM)
+
+%% 1 – Capability advertisement
+Client->>Server: ClientHello supported-groups: (x25519, kyber768 )-pk / signature_algs: ecdsa & dilithium3
+
+%% 2 – Server selects hybrid suite
+Server-->>Client: ServerHello chosen-group: x25519+kyber768  key_share: x25519-pk / kyber768-pk
+
+%% 3 – TLS 1.3 handshake messages
+Server-->>Client: EncryptedExtensions (hybrid_pqc flag)
+Server-->>Client: Certificate  (ECC/Dilithium)
+Server-->>Client: CertificateVerify
+Server-->>Client: Finished
+
+%% 4 – Client finalises
+Client->>Server: PQC ciphertext (encapsulated secret)
+Client->>Server: Finished
+
+Note over Client,Server: Both derive\nmaster_secret = HKDF(ECDH_secret ∥ PQC_secret)
+
+%% 5 – Encrypted channel
+Client-->>Server: Encrypted Application Data
+Server-->>Client: Encrypted Application Data
