@@ -1,0 +1,13 @@
+<div class="services-container">
+  <div class="services-header">
+    <h1>Services</h1>
+    <p>Professional development and cybersecurity solutions</p>
+  </div>
+  
+  <div class="services-grid">
+    <app-service-card 
+      *ngFor="let service of services; trackBy: trackByTitle"
+      [service]="service">
+    </app-service-card>
+  </div>
+</div>

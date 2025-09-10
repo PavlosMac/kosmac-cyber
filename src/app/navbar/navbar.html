@@ -28,6 +28,10 @@
         <mat-icon matListItemIcon>article</mat-icon>
         <span matListItemTitle>Post-Quantum Nginx</span>
       </a>
+      <a mat-list-item routerLink="/services" routerLinkActive="active" (click)="toggleDrawer()">
+        <mat-icon matListItemIcon>business</mat-icon>
+        <span matListItemTitle>Services</span>
+      </a>
       <!-- Add more navigation items here as needed -->
       <a mat-list-item routerLink="/" routerLinkActive="active" (click)="toggleDrawer()">
         <mat-icon matListItemIcon>home</mat-icon>
@@ -57,4 +61,3 @@
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
-  

@@ -1,6 +1,6 @@
 # Signals in Angular
 
-When I left Angular development 3 years ago, signals were not a thing, so I was excited to see what they can do. Signals seem to offer us reactive state as an angular primitive - I like the sound of anything reactive.
+When I left Angular development 3 years ago, signals were not a thing, so I was excited to see what they can do. Signals seem to offer us reactive state as an Angular primitive - I like the sound of anything reactive.
 
 I could see easily how Signals could replace BehaviorSubjects and other similar state management `Rxjs` operators. But what was even more interesting was how it could be used in place of combineLatest operator. Those who are familiar with combineLatest 
 will have come across this moment where one event emission causes side effects, double emissions essentially - this is the diamond problem.
@@ -120,16 +120,18 @@ Nice with a simplified syntax. :+1:
 
 We see from the above that we need less code to achieve the same results. Nor do we need to manually handle memory management when components are destroyed because as there was no connection to the stream with `subscribe()` . 
 
-So signals are a huge improvement over BehaviorSubjects in many ways.
+
+This was one small nugget look at *Signals*. What I later realised was their intented use, which is to trigger change detection less often and more localised, thus improving performance. 
+
+Singals paired with Angulars new Zoneless paradigm are offering more performant Angular applications. Zonejs is Angulars internal motor for checking when memory has changed and commencing DOM updates as a result. DOM updates are expensive and this meant that traditionally big Angular applications could become slow. Signals lead this new way of managing change detection by forcing the developer to indicate which variables in memory Angular needs to keep tabs on. Calling .set() informs consumers and makes the system reactive, telling Angular when new updates to the DOM are needed.
+
+This is a profound paradigm shift and makes Angular definitely a sight for sore eyes, especially for those of us who have been stuck on droopy, bloated React codebases.
 
 ### To Recap ###
 
 **API Simplicity:**
-- **Signals**: `.set()`, `.update()`, direct access with `()`
+- **Signals**: `.set()`, `.update()`, direct access with `()` - give us that reactivity Angular is known for
 - **BehaviorSubject**: `.next()`, `.complete()`, requires `| async` pipe
 - **Memory-leak Risks** - BehaviorSubjects require manual teardown
-
-**Performance:** 
-Although neglible in most cases, signals are more performant than BehaviorSubjects because they only update when the value actually changes and bypass change detection.
-- **Signals**: Only updates when value actually changes
-- **BehaviorSubject**: Can emit even when value is the same
+- **Zoneless** Singals fit right into Angulars' new 'Zoneless' paradigm
+- **Change-detection** Signals will now help Angular manage change detection, keeping things performant

@@ -4,6 +4,7 @@ import { SignalsComponent } from './blog/signals/signals';
 import { PqcNginxComponent } from './blog/pqc-nginx/pqc-nginx';
 import { NginxTlsComponent } from './blog/nginx-tls/nginx-tls';
 import { AboutComponent } from './about/about';
+import { ServicesComponent } from './services/services';
 
 export const routes: Routes = [
   { path: '', component: AboutComponent },
@@ -11,4 +12,5 @@ export const routes: Routes = [
   { path: 'blog/signals', component: SignalsComponent },
   { path: 'blog/pqc-nginx', component: PqcNginxComponent },
   { path: 'blog/tls-nginx', component: NginxTlsComponent },
+  { path: 'services', component: ServicesComponent },
 ];

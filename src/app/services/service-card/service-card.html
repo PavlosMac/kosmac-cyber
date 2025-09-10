@@ -1,0 +1,45 @@
+<mat-card 
+  class="service-card"
+  [class.shaking]="isShaking"
+  (mouseenter)="onMouseEnter()">
+  
+  <div class="screenshot-container">
+    <img 
+      [src]="service.screenshot" 
+      [alt]="service.title + ' screenshot'"
+      class="service-screenshot"
+      loading="lazy">
+  </div>
+  
+  <mat-card-header>
+    <mat-card-title>{{ service.title }}</mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <p class="service-description">{{ service.description }}</p>
+    
+    <div class="technologies">
+      <mat-chip-set>
+        <mat-chip *ngFor="let tech of service.technologies">
+          {{ tech }}
+        </mat-chip>
+      </mat-chip-set>
+    </div>
+    
+    <div class="price" *ngIf="service.price">
+      <mat-icon>attach_money</mat-icon>
+      <span>{{ service.price }}</span>
+    </div>
+  </mat-card-content>
+  
+  <mat-card-actions>
+    <button mat-raised-button color="primary">
+      <mat-icon>contact_mail</mat-icon>
+      Get Quote
+    </button>
+    <button mat-button>
+      <mat-icon>info</mat-icon>
+      Learn More
+    </button>
+  </mat-card-actions>
+</mat-card>
