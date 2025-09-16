@@ -15,27 +15,38 @@
     
     <!-- Navigation Menu -->
     <mat-nav-list>
-      <a mat-list-item routerLink="/blog/angular" routerLinkActive="active" (click)="toggleDrawer()">
-        <mat-icon matListItemIcon>article</mat-icon>
-        <span matListItemTitle>Returning to Angular</span>
-      </a>
-      
-      <a mat-list-item routerLink="/blog/signals" routerLinkActive="active" (click)="toggleDrawer()">
-        <mat-icon matListItemIcon>article</mat-icon>
-        <span matListItemTitle>Angular Signals</span>
-      </a>
-      <a mat-list-item routerLink="/blog/pqc-nginx" routerLinkActive="active" (click)="toggleDrawer()">
-        <mat-icon matListItemIcon>article</mat-icon>
-        <span matListItemTitle>Post-Quantum Nginx</span>
-      </a>
-      <a mat-list-item routerLink="/services" routerLinkActive="active" (click)="toggleDrawer()">
-        <mat-icon matListItemIcon>business</mat-icon>
-        <span matListItemTitle>Services</span>
-      </a>
-      <!-- Add more navigation items here as needed -->
       <a mat-list-item routerLink="/" routerLinkActive="active" (click)="toggleDrawer()">
         <mat-icon matListItemIcon>home</mat-icon>
         <span matListItemTitle>Home</span>
+      </a>
+
+      <!-- Blog Submenu -->
+      <button mat-list-item (click)="toggleBlogMenu()" class="submenu-toggle">
+        <mat-icon matListItemIcon>{{ isBlogMenuOpen ? 'expand_less' : 'expand_more' }}</mat-icon>
+        <span matListItemTitle>Blog</span>
+      </button>
+
+      <div class="submenu" [class.open]="isBlogMenuOpen">
+        <a mat-list-item routerLink="/blog/angular" routerLinkActive="active" (click)="toggleDrawer()" class="submenu-item">
+          <span matListItemTitle>Returning to Angular</span>
+        </a>
+
+        <a mat-list-item routerLink="/blog/signals" routerLinkActive="active" (click)="toggleDrawer()" class="submenu-item">
+          <span matListItemTitle>Angular Signals</span>
+        </a>
+
+        <a mat-list-item routerLink="/blog/pqc-nginx" routerLinkActive="active" (click)="toggleDrawer()" class="submenu-item">
+          <span matListItemTitle>Post-Quantum Nginx</span>
+        </a>
+
+        <a mat-list-item routerLink="/blog/kyber-crystals" routerLinkActive="active" (click)="toggleDrawer()" class="submenu-item">
+          <span matListItemTitle>Crystals-KYBER</span>
+        </a>
+      </div>
+
+      <a mat-list-item routerLink="/services" routerLinkActive="active" (click)="toggleDrawer()">
+        <mat-icon matListItemIcon>business</mat-icon>
+        <span matListItemTitle>Services</span>
       </a>
     </mat-nav-list>
   </mat-sidenav>

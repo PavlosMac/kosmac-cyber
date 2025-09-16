@@ -71,3 +71,59 @@ This is an Angular 20 application using:
 - Production builds are optimized with bundle budgets (500kB warning, 1MB error)
 - Development builds include source maps and no optimization
 
+## Blog Creation Pattern
+
+To create a new blog post, follow this established pattern:
+
+### 1. Create Blog Component Files
+Create a new directory under `src/app/blog/[blog-name]/` with these files:
+
+**TypeScript Component** (`[blog-name].ts`):
+```typescript
+import { Component } from '@angular/core';
+import { MarkdownModule } from 'ngx-markdown';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-[blog-name]',
+  imports: [CommonModule, MarkdownModule],
+  templateUrl: './[blog-name].html',
+  styleUrl: './[blog-name].scss'
+})
+export class [BlogName]Component {
+  markdownPath = 'blog/[blog-name].md';
+}
+```
+
+**HTML Template** (`[blog-name].html`):
+```html
+<div class="blog-content">
+  <markdown [src]="markdownPath" emoji></markdown>
+</div>
+```
+
+**SCSS Styles** (`[blog-name].scss`):
+```scss
+.blog-header {
+  text-align: center;
+  padding: 2rem 0;
+}
+```
+
+### 2. Add Route
+Update `src/app/app.routes.ts`:
+- Import the component: `import { [BlogName]Component } from './blog/[blog-name]/[blog-name]';`
+- Add route: `{ path: 'blog/[blog-name]', component: [BlogName]Component }`
+
+### 3. Update Navigation
+Add navigation link in `src/app/navbar/navbar.html`:
+```html
+<a mat-list-item routerLink="/blog/[blog-name]" routerLinkActive="active" (click)="toggleDrawer()">
+  <mat-icon matListItemIcon>article</mat-icon>
+  <span matListItemTitle>[Blog Title]</span>
+</a>
+```
+
+### 4. Create Markdown Content
+Place the markdown file in `public/blog/[blog-name].md` with your blog content.
+

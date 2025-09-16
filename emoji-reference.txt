@@ -1,0 +1,263 @@
+EMOJI REFERENCE FOR KOSMAC-CYBER BLOG
+=======================================
+
+This file contains emoji syntax reference for use in your markdown blog posts.
+Your blog uses ngx-markdown with emoji support enabled.
+
+CURRENTLY USED EMOJIS IN YOUR BLOGS:
+====================================
+
+:sob:           😭    (crying face - used in angular.md)
+:rage:          😡    (rage face - used in angular.md)
+:wink:          😉    (winking face - used in angular.md)
+:satisfied:     😊    (satisfied/happy face - used in angular.md)
+⏰                     (alarm clock - used in kyber-crystals.md)
+👂                     (ear - used in kyber-crystals.md)
+✅                     (check mark - used in nginx post)
+
+COMMON EMOJI SYNTAX:
+===================
+
+FACES & EMOTIONS:
+:smile:         😄    (smiling face)
+:grin:          😁    (grinning face)
+:joy:           😂    (face with tears of joy)
+:laughing:      😆    (laughing face)
+:blush:         😊    (smiling face with smiling eyes)
+:heart_eyes:    😍    (smiling face with heart-eyes)
+:kissing_heart: 😘    (face blowing a kiss)
+:relaxed:       ☺️     (smiling face)
+:satisfied:     😊    (satisfied face)
+:grinning:      😀    (grinning face)
+:innocent:      😇    (smiling face with halo)
+:wink:          😉    (winking face)
+:relieved:      😌    (relieved face)
+:heart_eyes:    😍    (heart eyes)
+:sunglasses:    😎    (smiling face with sunglasses)
+:smirk:         😏    (smirking face)
+:neutral_face:  😐    (neutral face)
+:expressionless: 😑   (expressionless face)
+:unamused:      😒    (unamused face)
+:sweat_smile:   😅    (grinning face with sweat)
+:sweat:         😓    (downcast face with sweat)
+:disappointed:  😞    (disappointed face)
+:worried:       😟    (worried face)
+:angry:         😠    (angry face)
+:rage:          😡    (pouting face)
+:pensive:       😔    (pensive face)
+:confused:      😕    (confused face)
+:slightly_smiling_face: 🙂 (slightly smiling face)
+:upside_down_face: 🙃  (upside-down face)
+:money_mouth_face: 🤑  (money-mouth face)
+:nerd_face:     🤓    (nerd face)
+:sunglasses:    😎    (smiling face with sunglasses)
+:clown_face:    🤡    (clown face)
+:cowboy_hat_face: 🤠  (cowboy hat face)
+:hugs:          🤗    (hugging face)
+:smirk:         😏    (smirking face)
+:no_mouth:      😶    (face without mouth)
+:neutral_face:  😐    (neutral face)
+:expressionless: 😑   (expressionless face)
+:unamused:      😒    (unamused face)
+:roll_eyes:     🙄    (face with rolling eyes)
+:thinking:      🤔    (thinking face)
+:flushed:       😳    (flushed face)
+:disappointed:  😞    (disappointed face)
+:worried:       😟    (worried face)
+:angry:         😠    (angry face)
+:rage:          😡    (pouting face)
+:cry:           😢    (crying face)
+:sob:           😭    (loudly crying face)
+:scream:        😱    (face screaming in fear)
+:confounded:    😖    (confounded face)
+:persevere:     😣    (persevering face)
+:disappointed_relieved: 😥 (disappointed but relieved face)
+:frowning:      😦    (frowning face with open mouth)
+:anguished:     😧    (anguished face)
+:fearful:       😨    (fearful face)
+:weary:         😩    (weary face)
+:sleepy:        😪    (sleepy face)
+:tired_face:    😫    (tired face)
+:grimacing:     😬    (grimacing face)
+:triumph:       😤    (face with steam from nose)
+:open_mouth:    😮    (face with open mouth)
+:hushed:        😯    (hushed face)
+:cold_sweat:    😰    (face with open mouth & cold sweat)
+:scream:        😱    (face screaming in fear)
+:astonished:    😲    (astonished face)
+:flushed:       😳    (flushed face)
+:sleeping:      😴    (sleeping face)
+:dizzy_face:    😵    (dizzy face)
+:no_mouth:      😶    (face without mouth)
+:mask:          😷    (face with medical mask)
+
+OBJECTS & SYMBOLS:
+:computer:      💻    (laptop computer)
+:keyboard:      ⌨️     (keyboard)
+:mouse:         🖱️     (computer mouse)
+:phone:         📱    (mobile phone)
+:telephone:     ☎️     (telephone)
+:pager:         📟    (pager)
+:fax:           📠    (fax machine)
+:tv:            📺    (television)
+:radio:         📻    (radio)
+:vhs:           📼    (videocassette)
+:camera:        📷    (camera)
+:camera_flash:  📸    (camera with flash)
+:video_camera:  📹    (video camera)
+:movie_camera:  🎥    (movie camera)
+:film_projector: 📽️   (film projector)
+:tv:            📺    (television)
+:radio:         📻    (radio)
+:headphones:    🎧    (headphones)
+:microphone:    🎤    (microphone)
+:microphone2:   🎙️     (studio microphone)
+:level_slider:  🎚️     (level slider)
+:control_knobs: 🎛️     (control knobs)
+:stopwatch:     ⏱️     (stopwatch)
+:timer_clock:   ⏲️     (timer clock)
+:alarm_clock:   ⏰    (alarm clock)
+:clock12:       🕛    (twelve o'clock)
+:hourglass:     ⌛    (hourglass)
+:hourglass_flowing_sand: ⏳ (hourglass with flowing sand)
+:satellite:     📡    (satellite antenna)
+:battery:       🔋    (battery)
+:electric_plug: 🔌    (electric plug)
+:bulb:          💡    (light bulb)
+:flashlight:    🔦    (flashlight)
+:candle:        🕯️     (candle)
+:fire:          🔥    (fire)
+:flame:         🔥    (fire)
+:zap:           ⚡    (high voltage)
+:bomb:          💣    (bomb)
+:fireworks:     🎆    (fireworks)
+:sparkler:      🎇    (sparkler)
+:sparkles:      ✨    (sparkles)
+
+TECHNICAL & CODING:
+:gear:          ⚙️     (gear)
+:hammer_and_wrench: 🛠️  (hammer and wrench)
+:hammer:        🔨    (hammer)
+:wrench:        🔧    (wrench)
+:nut_and_bolt:  🔩    (nut and bolt)
+:pick:          ⛏️     (pick)
+:hammer_and_pick: ⚒️   (hammer and pick)
+:toolbox:       🧰    (toolbox)
+:magnet:        🧲    (magnet)
+:ladder:        🪜    (ladder)
+:test_tube:     🧪    (test tube)
+:petri_dish:    🧫    (petri dish)
+:dna:           🧬    (dna)
+:microscope:    🔬    (microscope)
+:telescope:     🔭    (telescope)
+:satellite:     📡    (satellite antenna)
+:syringe:       💉    (syringe)
+:pill:          💊    (pill)
+:stethoscope:   🩺    (stethoscope)
+:x_ray:         🩻    (x-ray)
+
+ARROWS & DIRECTIONS:
+:arrow_up:      ⬆️     (up arrow)
+:arrow_upper_right: ↗️ (up-right arrow)
+:arrow_right:   ➡️     (right arrow)
+:arrow_lower_right: ↘️ (down-right arrow)
+:arrow_down:    ⬇️     (down arrow)
+:arrow_lower_left: ↙️  (down-left arrow)
+:arrow_left:    ⬅️     (left arrow)
+:arrow_upper_left: ↖️  (up-left arrow)
+:arrow_up_down: ↕️     (up-down arrow)
+:left_right_arrow: ↔️  (left-right arrow)
+:leftwards_arrow_with_hook: ↩️ (leftwards arrow with hook)
+:arrow_right_hook: ↪️  (rightwards arrow with hook)
+:arrow_heading_up: ⤴️  (arrow pointing rightwards then curving upwards)
+:arrow_heading_down: ⤵️ (arrow pointing rightwards then curving downwards)
+:arrows_clockwise: 🔃 (clockwise downwards and upwards open circle arrows)
+:arrows_counterclockwise: 🔄 (anticlockwise downwards and upwards open circle arrows)
+:back:          🔙    (back arrow)
+:end:           🔚    (end arrow)
+:on:            🔛    (on! arrow)
+:soon:          🔜    (soon arrow)
+:top:           🔝    (top arrow)
+
+CHECK MARKS & X'S:
+:white_check_mark: ✅ (white heavy check mark)
+:ballot_box_with_check: ☑️ (ballot box with check)
+:heavy_check_mark: ✔️ (heavy check mark)
+:heavy_multiplication_x: ✖️ (heavy multiplication x)
+:x:             ❌    (cross mark)
+:negative_squared_cross_mark: ❎ (negative squared cross mark)
+
+NUMBERS & LETTERS:
+:hash:          #️⃣    (keycap: #)
+:asterisk:      *️⃣    (keycap: *)
+:zero:          0️⃣    (keycap: 0)
+:one:           1️⃣    (keycap: 1)
+:two:           2️⃣    (keycap: 2)
+:three:         3️⃣    (keycap: 3)
+:four:          4️⃣    (keycap: 4)
+:five:          5️⃣    (keycap: 5)
+:six:           6️⃣    (keycap: 6)
+:seven:         7️⃣    (keycap: 7)
+:eight:         8️⃣    (keycap: 8)
+:nine:          9️⃣    (keycap: 9)
+:keycap_ten:    🔟    (keycap: 10)
+:100:           💯    (hundred points symbol)
+
+OFFICE & DOCUMENTS:
+:file_folder:   📁    (file folder)
+:open_file_folder: 📂 (open file folder)
+:card_index_dividers: 🗂️ (card index dividers)
+:date:          📅    (calendar)
+:calendar:      📆    (tear-off calendar)
+:spiral_calendar: 🗓️  (spiral calendar)
+:card_index:    📇    (card index)
+:chart_with_upwards_trend: 📈 (chart increasing)
+:chart_with_downwards_trend: 📉 (chart decreasing)
+:bar_chart:     📊    (bar chart)
+:clipboard:     📋    (clipboard)
+:pushpin:       📌    (pushpin)
+:round_pushpin: 📍    (round pushpin)
+:paperclip:     📎    (paperclip)
+:paperclips:    🖇️     (linked paperclips)
+:straight_ruler: 📏   (straight ruler)
+:triangular_ruler: 📐 (triangular ruler)
+:scissors:      ✂️     (scissors)
+:card_file_box: 🗃️    (card file box)
+:file_cabinet:  🗄️    (file cabinet)
+:wastebasket:   🗑️    (wastebasket)
+
+SECURITY & PRIVACY:
+:lock:          🔒    (locked)
+:unlock:        🔓    (unlocked)
+:lock_with_ink_pen: 🔏 (locked with pen)
+:closed_lock_with_key: 🔐 (locked with key)
+:key:           🔑    (key)
+:old_key:       🗝️     (old key)
+
+USAGE EXAMPLES:
+===============
+
+1. In your markdown:
+   "After working with Next.js :sob:, I realized how much I missed Angular!"
+
+2. Unicode emojis (can be used directly):
+   "The Setup: Clock Math ⏰"
+   "Alice listens 👂 to Bob's message"
+
+3. Common patterns in technical blogs:
+   :bulb: for ideas/tips
+   :warning: for warnings
+   :information_source: for info
+   :rocket: for performance
+   :zap: for speed
+   :gear: for configuration
+   :hammer_and_wrench: for tools
+   :lock: for security
+   :computer: for code examples
+
+NOTES:
+======
+- Your ngx-markdown setup supports both :syntax: and direct unicode emojis
+- Test new emojis in development before using in production
+- Some emojis may render differently across platforms
+- Keep emoji usage consistent with your technical blog tone

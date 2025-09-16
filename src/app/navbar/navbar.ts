@@ -24,8 +24,13 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent {
   isDrawerOpen = false;
+  isBlogMenuOpen = false;
 
   toggleDrawer() {
     this.isDrawerOpen = !this.isDrawerOpen;
+  }
+
+  toggleBlogMenu() {
+    this.isBlogMenuOpen = !this.isBlogMenuOpen;
   }
 }
