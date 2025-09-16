@@ -30,7 +30,7 @@ Learning outcomes:
 
 "The Open Quantum Safe (OQS) project is an open-source project that aims to support the transition to quantum-resistant cryptography."
 
-And they have a docker image available on their github, awesome!
+And they have a docker image available on their github, awesome! :sunglasses:
 
 ## The Architecture
 
@@ -62,7 +62,7 @@ Important thing to note here is `--curves X25519MLKEM768` MLKEM768 is CRYTALS-KY
 ### ✅ Let's Implement
 - **Hybrid Key Exchange Algorithm**: X25519MLKEM768 (simultaneous classical + post-quantum protection)
 
-KEM is slightly different to traditional Diffie-Hellman, in that the public key is encapsulated into a ciphertext and a shared key, this ciphertext it sent back to the client. [This explains it well](https://medium.com/identity-beyond-borders/crystals-kyber-the-key-to-post-quantum-encryption-3154b305e7bd).
+KEM is slightly different to traditional Diffie-Hellman, in that the public key is encapsulated into a ciphertext and a shared key, this ciphertext it sent back to the client. [This explains it well](https://medium.com/identity-beyond-borders/crystals-kyber-the-key-to-post-quantum-encryption-3154b305e7bd)
 
 - Our pqc certificates will be made using ML-DSA-44 (NIST standardized quantum-safe digital signatures) and our symmetric key will be AES-256-GCM, AES 256 is already quantumm safe and will never leave the server.
 
