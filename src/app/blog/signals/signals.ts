@@ -7,5 +7,5 @@ import { MarkdownComponent } from 'ngx-markdown';
   styleUrl: './signals.scss'
 })
 export class SignalsComponent {
-  markdownPath = 'blog/signals.md';
+  markdownPath = '/blog/signals.md';
 }

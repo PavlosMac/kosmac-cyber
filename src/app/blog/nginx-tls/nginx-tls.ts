@@ -9,6 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './nginx-tls.scss'
 })
 export class NginxTlsComponent {
-  markdownPath = 'blog/nginx-oqs-walkthrough.md';
-  mermaidPath = 'mermaids/hybrid-tls.mermaid';
+  markdownPath = '/blog/nginx-oqs-walkthrough.md';
+  mermaidPath = '/mermaids/hybrid-tls.mermaid';
 }

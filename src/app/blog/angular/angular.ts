@@ -11,5 +11,5 @@ import { CommonModule } from '@angular/common';
 })
 export class AngularBlogComponent {
   // Path to the markdown file relative to the deployed assets
-  markdownPath = 'blog/angular.md';
+  markdownPath = '/blog/angular.md';
 }

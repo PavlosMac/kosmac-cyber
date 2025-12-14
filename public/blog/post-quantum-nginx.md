@@ -1,3 +1,5 @@
+![Quantum Computing](/screenshots/quantum.jpeg)
+
 # Post-Quantum-Cryptography (PQC)
 
 Recently I became slightly obsessed with post quantum cryptography. I see it as an IT apocolypse - an impending doom of sorts, but none of my peers seem interested. Quantum computers represent data using Qubits. A quibit is a combination of 0 and 1 simultaneously. This abililty to exist as a in both states allows quantum computers to perform large calculations. This notion is powerful as it moves data representation beyond the classical binary world and into another realm, the quantum real I guess. One of the main problems with current quantum computing methods is that data in this superposition state is unstable. This instability means 'errors'.

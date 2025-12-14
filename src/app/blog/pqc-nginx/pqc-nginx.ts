@@ -9,6 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './pqc-nginx.scss'
 })
 export class PqcNginxComponent {
-  markdownPath = 'blog/post-quantum-nginx.md';
+  markdownPath = '/blog/post-quantum-nginx.md';
   mermaidPath = 'mermaids/hybrid-tls.mermaid';
 }

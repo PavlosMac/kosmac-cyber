@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './kyber-crystals.scss'
 })
 export class KyberCrystalsComponent {
-  markdownPath = 'blog/kyber-crystals.md';
+  markdownPath = '/blog/kyber-crystals.md';
 }
