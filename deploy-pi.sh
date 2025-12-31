@@ -31,7 +31,7 @@ deploy() {
   docker run -d \
     --name ${CONTAINER_NAME} \
     --restart unless-stopped \
-    -p 80:8080 \
+    --network app-network \
     ${FULL_IMAGE}
 
   echo "Deployed successfully!"
