@@ -4,7 +4,6 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideMarkdown, MERMAID_OPTIONS } from 'ngx-markdown';
 
 import { routes } from './app.routes';
-import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
 // Import Prism.js and required languages
 import 'prismjs';
@@ -20,7 +19,6 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideRouter(routes),
-    provideClientHydration(withEventReplay()),
     provideHttpClient(withFetch()),
     provideMarkdown({
       mermaidOptions: {
