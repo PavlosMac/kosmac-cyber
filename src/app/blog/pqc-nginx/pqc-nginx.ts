@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef, inject } from '@angular/core';
 import { MarkdownModule } from 'ngx-markdown';
 import { CommonModule } from '@angular/common';
 
@@ -11,4 +11,9 @@ import { CommonModule } from '@angular/common';
 export class PqcNginxComponent {
   markdownPath = '/blog/post-quantum-nginx.md';
   mermaidPath = 'mermaids/hybrid-tls.mermaid';
+  private cdr = inject(ChangeDetectorRef);
+
+  onMarkdownReady() {
+    this.cdr.detectChanges();
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef, inject } from '@angular/core';
 import { MarkdownModule } from 'ngx-markdown';
 import { CommonModule } from '@angular/common';
 
@@ -10,4 +10,9 @@ import { CommonModule } from '@angular/common';
 })
 export class KyberCrystalsComponent {
   markdownPath = '/blog/kyber-crystals.md';
+  private cdr = inject(ChangeDetectorRef);
+
+  onMarkdownReady() {
+    this.cdr.detectChanges();
+  }
 }

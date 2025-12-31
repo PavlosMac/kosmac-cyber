@@ -1,5 +1,3 @@
-
-
 <div class="blog-content">
-  <markdown [src]="markdownPath" emoji></markdown>
+  <markdown [src]="markdownPath" emoji (ready)="onMarkdownReady()"></markdown>
 </div>

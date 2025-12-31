@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef, inject } from '@angular/core';
 import { MarkdownComponent } from 'ngx-markdown';
+
 @Component({
   selector: 'app-signals',
   imports: [MarkdownComponent],
@@ -8,4 +9,9 @@ import { MarkdownComponent } from 'ngx-markdown';
 })
 export class SignalsComponent {
   markdownPath = '/blog/signals.md';
+  private cdr = inject(ChangeDetectorRef);
+
+  onMarkdownReady() {
+    this.cdr.detectChanges();
+  }
 }
