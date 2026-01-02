@@ -2,7 +2,7 @@
 
 KEX or key-exchange is one of the most fundamental protocols for secure data sharing on the internet. I had Gemini AI describe it like this:
 
-´alice has a secret key and a pub key.
+"alice has a secret key and a pub key.
 bob has a secret key and a pub key.
 
 alice sends her pub key to bob.
@@ -11,17 +11,17 @@ bob sends his pub key to alice.
 alice uses her secret key and bob's pub key to make a shared secret key.
 bob uses his secret key and alice's pub key to make the same shared secret key.
 
-Now alice and bob have a shared secret key.´
+Now alice and bob have a shared secret key."
 
-That shared key is used to encrypt all application data after a TLS handshake between a client ( e.g you browser ) and a server. TLS is 'Transport Layer Security' is a sublayer of the communication tunnel between client and server.
+That shared key is used to encrypt all application data after a TLS handshake between a client ( e.g your browser ) and a server. TLS is 'Transport Layer Security' is a sublayer of the communication tunnel between client and server.
 
-So how can TLS become quantum safe when both parties must send their public keys to one other? Well with Diffie-Hellman key exchange the public keys are RSA encrypted. Although the secrey key is AES encrypted which is quantum safe, RSA is not quantum safe.
+So how can TLS become quantum safe when both parties must send their public keys to one other? Well with Diffie-Hellman key exchange the public keys are RSA encrypted. Although the secret key is AES encrypted which is quantum safe, RSA is not quantum safe.
 
-I wanted to see if we could implement post quantum cryptography into an nginx server and make the TLS hanshake quantum safe.
+I wanted to see if we could implement post quantum cryptography into an nginx server and make the TLS handshake quantum safe.
 
  ## The Stack ## 
 
-A production-ready post-quantum cryptography (PQC) enabled nginx server with Node.js backend in a conatiner. This setup integrates Open Quantum Safe (OQS) libraries for hybrid traditional + post-quantum TLS encryption. Implementing PQC on nginx was going to be a valuable lesson on what tools already exist and how we can upgrade the foundation of all client server communication.
+A production-ready post-quantum cryptography (PQC) enabled nginx server with Node.js backend in a container. This setup integrates Open Quantum Safe (OQS) libraries for hybrid traditional + post-quantum TLS encryption. Implementing PQC on nginx was going to be a valuable lesson on what tools already exist and how we can upgrade the foundation of all client server communication.
 
 Learning outcomes:
 - How can we utilise the Open Quantum Safe tooling
@@ -41,7 +41,7 @@ And they have a docker image available on their github, awesome! :sunglasses:
 
 ## Hybrid Cryptography Explained
 
-One of the most importan fators in this switch to post quantum cryptography has been termed 'crypto agility'. This means that implmementors will need to be able to write new code into systems which can elegantly co-exist with current implementations. Why? So that current systems do not break and the migrations happen with as little headache as possible. Harnessing OQS in this project will give us crypto agility out of the box without having to write any new code.
+One of the most important factors in this switch to post quantum cryptography has been termed 'crypto agility'. This means that implementors will need to be able to write new code into systems which can elegantly co-exist with current implementations. Why? So that current systems do not break and the migrations happen with as little headache as possible. Harnessing OQS in this project will give us crypto agility out of the box without having to write any new code.
 
 ### Two Types of "Hybrid" in This Setup
 
@@ -55,7 +55,7 @@ Client Type | Request Method | Key Exchange | Signature | Security Level |
 | OQS Client (Auto) | No curve specified | X25519 | RSA-PSS | Classical Fallback |
 | Traditional Browser | Standard HTTPS | X25519 | RSA-PSS | Classical Security |
 
-Important thing to note here is `--curves X25519MLKEM768` MLKEM768 is CRYTALS-KYBER with 768 security level on par with AES-192. 768 has to do with the internal maths of the algorithm, not the key size.
+Important thing to note here is `--curves X25519MLKEM768` MLKEM768 is CRYSTALS-KYBER with 768 security level on par with AES-192. 768 has to do with the internal maths of the algorithm, not the key size.
 
 ## Post-Quantum Cryptography Features
 
@@ -64,12 +64,12 @@ Important thing to note here is `--curves X25519MLKEM768` MLKEM768 is CRYTALS-KY
 
 KEM is slightly different to traditional Diffie-Hellman, in that the public key is encapsulated into a ciphertext and a shared key, this ciphertext it sent back to the client. [This explains it well](https://medium.com/identity-beyond-borders/crystals-kyber-the-key-to-post-quantum-encryption-3154b305e7bd)
 
-- Our pqc certificates will be made using ML-DSA-44 (NIST standardized quantum-safe digital signatures) and our symmetric key will be AES-256-GCM, AES 256 is already quantumm safe and will never leave the server.
+- Our pqc certificates will be made using ML-DSA-44 (NIST standardized quantum-safe digital signatures) and our symmetric key will be AES-256-GCM, AES 256 is already quantum safe and will never leave the server.
 
-Wem will make sure we can present both RSA and ML-DSA-44 certificates based on client capabilities
+We will make sure we can present both RSA and ML-DSA-44 certificates based on client capabilities
 
 ### Security Status
-This Hybrid algorithm approach will provide protection against both classical and quantum attacks. Clients can explicitly request post-quantum algorithms for full quantum safety and traditional clients will automatically fall back to secure classical algorithms, allowing 'Readyness' for widespread post-quantum adoption with smooth migration path.
+This Hybrid algorithm approach will provide protection against both classical and quantum attacks. Clients can explicitly request post-quantum algorithms for full quantum safety and traditional clients will automatically fall back to secure classical algorithms, allowing 'Readiness' for widespread post-quantum adoption with smooth migration path.
 
 
 ## Building the Project

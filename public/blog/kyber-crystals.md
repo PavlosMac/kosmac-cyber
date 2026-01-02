@@ -49,7 +49,8 @@ All the math in Kyber happens on this special clock. This keeps the numbers from
 Eve's Problem: Knows A, t, u, v but cannot find s or r due to LWE noise!
 ```
 
-Step 1: Alice Creates Her Keys
+### Step 1: Alice Creates Her Keys
+
 Alice needs to create a public key (which she can shout across the room for everyone to hear) and a private key (which she keeps secret).
 
 The Secret (Private Key): Alice secretly thinks of a few small numbers, like s = (2, -1). This is her private key. The numbers are "small," meaning they are close to 0.
@@ -66,7 +67,8 @@ Without going deep into the matrix math, her calculation looks something like:
 
 This public key '***t***' is what she shouts across the room. An eavesdropper, Eve, hears '**t**' and knows the public grid '**A**', but because of the "noise" ('**e**'), she finds it impossible to work backward to figure out Alice's secret '**s**'. It's like trying to find the exact coordinates of a friend's house when you have a GPS signal that's off by a few feet.
 
-Step 2: You Create the Shared Secret
+### Step 2: You Create the Shared Secret
+
 Now you want to send Alice a secret message (which will become your shared secret key).
 
 Your Own Secret: You also think of a few small, secret numbers, let's call them r = (1, -2).
@@ -83,7 +85,8 @@ The "Fuzzy" Secret: The number v is a "fuzzy" version of the final secret. It's 
 
 Eve hears both u and v, but she can't make sense of them.
 
-Step 3: Alice Unlocks the Secret
+### Step 3: Alice Unlocks the Secret
+
 Alice has heard your "lockbox" u and your "fuzzy" secret v. Now she uses her original private key s to figure out the exact secret.
 
 Unlocking the Box: She takes your "lockbox" u and multiplies it by her secret s: u * s.
@@ -97,4 +100,4 @@ This final, clean number is the shared secret. You were also able to calculate t
 Why is it Secure?
 The security of Kyber rests on one simple fact: it is incredibly difficult to find the original secret `s` just by knowing the public key `t` and the public grid A. The added "noise" `e` makes it a computationally impossible "Learning With Errors" problem. A normal computer would take billions of years to guess the answer, and even a quantum computer doesn't get a significant speed-up, which is why it's considered quantum-safe.
 
-I implemented KEM (Key Encapsulation Mechanism) using CRYSTALS-KYBER in the ngxinx server post. [Read more](/blog/tls-nginx).
+I implemented KEM (Key Encapsulation Mechanism) using CRYSTALS-KYBER in the nginx server post. [Read more](/blog/tls-nginx).

@@ -1,7 +1,7 @@
 
 # Angular o Angular
 
-After spending a few years now working on full-stack projects using Nuxt and Next :sob: , I suddenly realised how much I was missing Angular. Recently I did a quick check on how things looked in v20 and regretted terribly not giving the framework a voice when I started working for a start up 6 months ago and were discussing what to use. At the moment I am working on a NextJs project and it is very frustrating how chaotic things easily become - I miss the structure Angular forces us to use. 
+After spending a few years now working on full-stack projects using Nuxt and Next :sob: , I suddenly realised how much I was missing Angular. Recently I did a quick check on how things looked in v20 and regretted terribly not giving the framework a voice when I started working for a startup 6 months ago and was discussing what to use. At the moment I am working on a NextJs project and it is very frustrating how chaotic things easily become - I miss the structure Angular forces us to use. 
 
 Files full of functions and a blurred landscape between server and client. Why on earth would it be a good thing having client and server code polluting one another?! :rage:
 
@@ -9,7 +9,7 @@ A front-end app should be a browser app, end of. Now React has mixed up the land
 
 Angular centralises logic and is good at doing those hard things we need it to do, for example making a refresh token request when we get a 401 THEN getting a new bearer token THEN retrying that original request for data that gave the auth error. This is hard stuff, but Angular does it elegantly using the HttpIntercepter class and centralising this logic in one place - fully atomic.
 
-SSR frameworks cannot do this easily because the context is not global. With NextJs you need to delcare 'use client' or 'use server' when creating a file with a component. Creating one global fetch function and polluting the import chain with 'use client' or 'use server' was a bad idea and led nowwhere, however I had no idea about this import chain and how easily it was to pollute. My fetch was going to be global and that was it. 
+SSR frameworks cannot do this easily because the context is not global. With NextJs you need to declare 'use client' or 'use server' when creating a file with a component. Creating one global fetch function and polluting the import chain with 'use client' or 'use server' was a bad idea and led nowhere, however I had no idea about this import chain and how easily it was to pollute. My fetch was going to be global and that was it. 
 
 In the end the global fetch was being imported by server and client code, which meant that although I could often test that a refresh actually occurred, every so often it would throw a 'Cookies can only be modified in server actions or a route handler' error.
 
@@ -52,11 +52,11 @@ export class RegistrationSearch implements OnInit {
 }
 ```
 
-When the component mounts a formControl is initialised an html input. Angular's formControl exposes an Observable, which is essentially a listener. As soon as the user types into that input we can capture that data and pipe it into a stream, using you guessed it a `pipe()`  :wink:  - simple, beautiful, elegant, READABLE. 
+When the component mounts a formControl is initialised on an HTML input. Angular's formControl exposes an Observable, which is essentially a listener. As soon as the user types into that input we can capture that data and pipe it into a stream, using you guessed it a `pipe()`  :wink:  - simple, beautiful, elegant, READABLE. 
 
 With so little syntax we have achieved so much - whilst also having opened up the gate to Reactive programming and Angulars Houdini sidekick `RxJS`. We have now created an Observable stream and can do anything we can with that data now, for example make a http request, the point is the stream is open and we can do things quickly. 
 
-The `pipe()` offers us many operators and provides us a `declaritive` mode to modify data and manipulate streams.
+The `pipe()` offers us many operators and provides us a `declarative` mode to modify data and manipulate streams.
 
 Try achieving this in React and it will not look so nice.  To create this listener effect in React was less elegant.
 
@@ -124,10 +124,10 @@ You will also notice the component decorator in our Angular snippet.
 })
 ```
 
-I find it incredibly refreshing to view a component file and find this syntax, it is super declaritive. This is a component in React:
+I find it incredibly refreshing to view a component file and find this syntax, it is super declarative. This is a component in React:
 
 ```typescript
-export function RegistrationSearch = () => {
+export const RegistrationSearch = () => {
     return (
         <div>
             <input type="text" />
@@ -157,7 +157,7 @@ But why have those options, why have a million ways to do the same thing. This h
 Of course I don't want to overly bad mouth React, we can of course install `Rxjs` and achieve the same functionality but this feels almost unintuitive, almost like doing rxjs a dirty. It's home is in Angular. Where that framework uses Rxjs under the hood and feels like it was 
 built with Rxjs in mind. The Router and HttpClient both rely on Observables to achieve their core functionality.
 
-Perhaps as a seasoned front-end developer, I have come to the conclusion that React maybe be better for beginners, allowing one to create more Javascript..esk code. But on my journey I have felt that React is a library and does not fully take away the pain of Javascript programming, which Angular does. With Angular, we write Angular code with Typescript.
+Perhaps as a seasoned front-end developer, I have come to the conclusion that React may be better for beginners, allowing one to create more JavaScript-esque code. But on my journey I have felt that React is a library and does not fully take away the pain of Javascript programming, which Angular does. With Angular, we write Angular code with Typescript.
 
 I am now the Old Dog.
 

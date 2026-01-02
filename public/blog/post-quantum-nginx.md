@@ -2,7 +2,7 @@
 
 # Post-Quantum-Cryptography (PQC)
 
-Recently I became slightly obsessed with post quantum cryptography. I see it as an IT apocolypse - an impending doom of sorts, but none of my peers seem interested. Quantum computers represent data using Qubits. A quibit is a combination of 0 and 1 simultaneously. This abililty to exist as a in both states allows quantum computers to perform large calculations. This notion is powerful as it moves data representation beyond the classical binary world and into another realm, the quantum real I guess. One of the main problems with current quantum computing methods is that data in this superposition state is unstable. This instability means 'errors'.
+Recently I became slightly obsessed with post quantum cryptography. I see it as an IT apocalypse - an impending doom of sorts, but none of my peers seem interested. Quantum computers represent data using Qubits. A qubit is a combination of 0 and 1 simultaneously. This ability to exist in both states allows quantum computers to perform large calculations. This notion is powerful as it moves data representation beyond the classical binary world and into another realm, the quantum realm I guess. One of the main problems with current quantum computing methods is that data in this superposition state is unstable. This instability means 'errors'.
 
 # Decoherence
  This is the loss of the "quantum-ness" of a qubit. Qubits are incredibly fragile. The slightest disturbance from their environment—a tiny change in temperature, a stray magnetic field, or even vibrations—can cause them to collapse out of their superposition into a classical 0 or 1. This collapse is the source of quantum errors.
@@ -20,7 +20,7 @@ In 2024 google performed a quantum experiment with their 'Willow' chip, where th
 So things are moving fast. The reality is that neither you nor me would have any real world use of a quantum computer. 
 Current computing offers us enough speed to perform most real world tasks. So who cares about quantum computers, right? True, the fields of mathematics and science mostly stand to benefit from quantum computing. 
 
-Personally the interest in quantum computing is not about the quantum computers themselves, but how they will challenge current security protocols. Having vastly superior computing power gives rogue actors the ablity to break current security standards, opening up the whole internet to attack. Quantum computers will break standard 2048-bit RSA public key, the backbone of modern internet security, in a matter of hours. In stark contrast, the most powerful classical supercomputers would require an estimated 300 trillion years to accomplish the same feat, rendering today's encryption obsolete in a post-quantum world.
+Personally the interest in quantum computing is not about the quantum computers themselves, but how they will challenge current security protocols. Having vastly superior computing power gives rogue actors the ability to break current security standards, opening up the whole internet to attack. Quantum computers will break standard 2048-bit RSA public key, the backbone of modern internet security, in a matter of hours. In stark contrast, the most powerful classical supercomputers would require an estimated 300 trillion years to accomplish the same feat, rendering today's encryption obsolete in a post-quantum world.
 
 Public key cryptography uses RSA to encrypt data. All modern RSA cryptography is based on factorization of prime numbers. Shor's algorithm is a quantum algorithm that can factorize large numbers in polynomial time, rendering RSA vulnerable to quantum attacks. [Read more here](https://www.classiq.io/insights/shors-algorithm-explained)
 
@@ -37,6 +37,6 @@ At the moment much of the libraries using these new algorithms are in their infa
 
 
 ## Getting Started
-So where to beging if one wishes to implement post-quantum cryptography? TLS (Transport Security Layer) came to mind. To be fair developers who are not working with infrustructure rarely need to know about TLS, yet it is fundamental to how data flows in the internet. Knowing very little about TLS myself, I saw it as one of the core areas affected by this paradigm shif and a great place to startt. So I thought I would try to build an nginx webserver with CRYSTALS KYBER or ML-KEM TLS encryption and see how far I could get.
+So where to begin if one wishes to implement post-quantum cryptography? TLS (Transport Security Layer) came to mind. To be fair developers who are not working with infrastructure rarely need to know about TLS, yet it is fundamental to how data flows in the internet. Knowing very little about TLS myself, I saw it as one of the core areas affected by this paradigm shift and a great place to start. So I thought I would try to build an nginx webserver with CRYSTALS KYBER or ML-KEM TLS encryption and see how far I could get.
 
 [Here](/blog/tls-nginx) is the blog post.
