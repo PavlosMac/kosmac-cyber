@@ -1,13 +1,8 @@
 {
   "mcpServers": {
-    "basic-memory": {
-      "type": "stdio",
-      "command": "uvx",
-      "args": [
-        "basic-memory",
-        "mcp"
-      ],
-      "env": {}
+    "angular-cli": {
+      "command": "npx",
+      "args": ["-y", "@angular/cli", "mcp"]
     }
   }
 }
